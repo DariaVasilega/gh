@@ -33,11 +33,6 @@ class User
      */
     private $age;
 
-//    /**
-//     * @ORM\Column(type="string", length=255)
-//     */
-//    private $male;
-
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Product", inversedBy="users")
@@ -59,10 +54,6 @@ class User
      */
     private $target;
 
-//    /**
-//     * @ORM\Column(type="string", length=1)
-//     */
-//    private $target;
 
     public function __construct()
     {
@@ -112,17 +103,6 @@ class User
         return $this;
     }
 
-//    public function getMale(): ?string
-//    {
-//        return $this->male;
-//    }
-//
-//    public function setMale(string $male): self
-//    {
-//        $this->male = $male;
-//
-//        return $this;
-//    }
 
     public function setFavoriteProducts(string $favoriteProducts): self
     {
@@ -225,16 +205,4 @@ class User
 
         return $this;
     }
-
-//    public function getTarget(): ?string
-//    {
-//        return $this->target;
-//    }
-//
-//    public function setTarget(string $target): self
-//    {
-//        $this->target = $target;
-//
-//        return $this;
-//    }
 }

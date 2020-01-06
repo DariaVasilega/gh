@@ -31,10 +31,6 @@ class Product
 
     private $title;
 
-//    /**
-//     * @ORM\Column(type="datetime")
-//     */
-//    private $time;
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="products")
      */
@@ -111,17 +107,6 @@ class Product
         return $this;
     }
 
-//    public function getTime(): ?\DateTimeInterface
-//    {
-//        return $this->time;
-//    }
-//
-//    public function setTime(\DateTimeInterface $time): self
-//    {
-//        $this->time = $time;
-//
-//        return $this;
-//    }
 
     public function getPrice(): ?int
     {
@@ -166,10 +151,7 @@ class Product
     public function __toString() {
         return $this->name;
     }
-//    /**
-//     * @ORM\Column(type="datetime")
-//     * @Gedmo\Timestampable(on="create")
-//     */
+
     /**@var \DateTime
      *
      * @ORM\Column(type="datetime")
@@ -177,11 +159,7 @@ class Product
      *
      */
     private $createdAt;
-//    /**
-//     *
-//     * @ORM\Column(type="datetime")
-//     * @Gedmo\Timestampable(on="update")
-//     */
+
     /**@var DateTime
      *
      * @ORM\Column(type="datetime")

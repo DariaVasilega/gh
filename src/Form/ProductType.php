@@ -20,10 +20,6 @@ class ProductType extends AbstractType
             ->add('updatedAt')
             ->add('category')
             ->add('user')
-//            ->add('time')
-//            ->add('time', DateTimeType::class, [
-//                'date_label' => 'Starts On',
-//            ]);
         ;
     }
 

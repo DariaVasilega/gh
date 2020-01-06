@@ -24,10 +24,6 @@ class UserType extends AbstractType
                     'M' => false,
                 ],
             ])
-//            ->add('gender', 'choice', array(
-//        'choices'   => array('m' => 'Male', 'f' => 'Female'),
-//        'required'  => false,
-//    ));
          ;
     }
 

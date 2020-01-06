@@ -17,7 +17,6 @@ class AppFixtures extends Fixture
             $product->setName('product '.$i);
             $product->setPrice(mt_rand(10, 100));
             $product->setTitle('asdsa');
-//            $product->setTime('18:00:00');
             $manager->persist($product);
         }
 
@@ -32,12 +31,9 @@ class AppFixtures extends Fixture
             $user->setName('user' .$i);
             $user->setAge('123');
             $user->setFavoriteProducts('dasdasd');
-//            $user->setMale('f');
             $user->setEmail('dass@dasd.com');
             $manager->persist($user);
-
         }
-
         $manager->flush();
     }
 }
