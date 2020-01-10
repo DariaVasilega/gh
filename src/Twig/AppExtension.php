@@ -8,13 +8,16 @@ class AppExtension extends AbstractExtension
 {
     public function getFilters()
     {
-        return [
-            new TwigFilter('time', [$this, 'timestamp']),
-        ];
+        return array(
+            new TwigFilter('price', array($this, 'priceFilter')),
+        );
     }
 
+    public function priceFilter($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
+    {
+        $price = number_format($number, $decimals, $decPoint, $thousandsSep);
+        $price = '$'.$price;
 
-    function timestamp($time) {
-        echo date("N", $time);
+        return $price;
     }
 }
