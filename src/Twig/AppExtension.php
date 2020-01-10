@@ -6,18 +6,19 @@ use Twig\TwigFilter;
 
 class AppExtension extends AbstractExtension
 {
+
     public function getFilters()
     {
         return array(
-            new TwigFilter('price', array($this, 'priceFilter')),
+            new TwigFilter('country', array($this, 'serverTimezone')),
         );
     }
 
-    public function priceFilter($number, $decimals = 0, $decPoint = '.', $thousandsSep = ',')
+    public function serverTimezone()
     {
-        $price = number_format($number, $decimals, $decPoint, $thousandsSep);
-        $price = '$'.$price;
-
-        return $price;
+            return date_default_timezone_get();
     }
+
+
+
 }
