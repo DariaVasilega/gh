@@ -1,38 +1,38 @@
-{% extends 'base.html.twig' %}
+{#{% extends 'base.html.twig' %}#}
 
-{% block title %}Product index{% endblock %}
+{#{% block title %}Product index{% endblock %}#}
 
-{% block body %}
-    <h1>Product index</h1>
+{#{% block body %}#}
+{#    <h1>Product index</h1>#}
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Title</th>
-                <th>Price</th>
-                <th>show</th>
-                <th>edit</th>
-            </tr>
-        </thead>
-        <tbody>
-        {% for product in products %}
-            <tr>
-                <td>{{ product.id }}</td>
-                <td>{{ product.name }}</td>
-                <td>{{ product.title }}</td>
-                <td>{{ product.price|price(2, ',', '.') }}</td>
-                <td><a href="{{ path('product_show', {'id': product.id}) }}">show</a></td>
-                <td><a href="{{ path('product_edit', {'id': product.id}) }}">edit</a></td>
-            </tr>
-        {% else %}
-            <tr>
-                <td colspan="5">no records found</td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+{#    <table class="table">#}
+{#        <thead>#}
+{#            <tr>#}
+{#                <th>Id</th>#}
+{#                <th>Name</th>#}
+{#                <th>Title</th>#}
+{#                <th>Price</th>#}
+{#                <th>show</th>#}
+{#                <th>edit</th>#}
+{#            </tr>#}
+{#        </thead>#}
+{#        <tbody>#}
+{#        {% for product in products %}#}
+{#            <tr>#}
+{#                <td>{{ product.id }}</td>#}
+{#                <td>{{ product.name }}</td>#}
+{#                <td>{{ product.title }}</td>#}
+{#                <td>{{ product.price|price(2, ',', '.') }}</td>#}
+{#                <td><a href="{{ path('product_show', {'id': product.id}) }}">show</a></td>#}
+{#                <td><a href="{{ path('product_edit', {'id': product.id}) }}">edit</a></td>#}
+{#            </tr>#}
+{#        {% else %}#}
+{#            <tr>#}
+{#                <td colspan="5">no records found</td>#}
+{#            </tr>#}
+{#        {% endfor %}#}
+{#        </tbody>#}
+{#    </table>#}
 
-    <a href="{{ path('product_new') }}">Create new</a>
-{% endblock %}
+{#    <a href="{{ path('product_new') }}">Create new</a>#}
+{#{% endblock %}#}
