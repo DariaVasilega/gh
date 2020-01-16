@@ -28,8 +28,8 @@ final class Version20191207082434 extends AbstractMigration
         $this->addSql('ALTER TABLE user_product ADD CONSTRAINT FK_8B471AA74584665A FOREIGN KEY (product_id) REFERENCES product (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE user_user ADD CONSTRAINT FK_F7129A803AD8644E FOREIGN KEY (user_source) REFERENCES user (id) ON DELETE CASCADE');
         $this->addSql('ALTER TABLE user_user ADD CONSTRAINT FK_F7129A80233D34C1 FOREIGN KEY (user_target) REFERENCES user (id) ON DELETE CASCADE');
-        $this->addSql('ALTER TABLE product DROP go_on_sale');
-        $this->addSql('ALTER TABLE user ADD age INT NOT NULL, ADD male VARCHAR(255) NOT NULL');
+//        $this->addSql('ALTER TABLE product DROP go_on_sale');
+//        $this->addSql('ALTER TABLE user ADD age INT NOT NULL, ADD male VARCHAR(255) NOT NULL');
     }
 
     public function down(Schema $schema) : void
@@ -39,7 +39,7 @@ final class Version20191207082434 extends AbstractMigration
 
         $this->addSql('DROP TABLE user_product');
         $this->addSql('DROP TABLE user_user');
-        $this->addSql('ALTER TABLE product ADD go_on_sale VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
-        $this->addSql('ALTER TABLE user DROP age, DROP male');
+//        $this->addSql('ALTER TABLE product ADD go_on_sale VARCHAR(255) CHARACTER SET utf8mb4 NOT NULL COLLATE `utf8mb4_unicode_ci`');
+//        $this->addSql('ALTER TABLE user DROP age, DROP male');
     }
 }

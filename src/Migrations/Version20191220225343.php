@@ -22,8 +22,8 @@ final class Version20191220225343 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE user ADD target VARCHAR(255) NOT NULL');
-        $this->addSql('ALTER TABLE product DROP created_at, DROP updated_at');
+//        $this->addSql('ALTER TABLE user ADD target VARCHAR(255) NOT NULL');
+//        $this->addSql('ALTER TABLE product DROP created_at, DROP updated_at');
     }
 
     public function down(Schema $schema) : void

@@ -22,7 +22,7 @@ final class Version20191207092905 extends AbstractMigration
         // this up() migration is auto-generated, please modify it to your needs
         $this->abortIf($this->connection->getDatabasePlatform()->getName() !== 'mysql', 'Migration can only be executed safely on \'mysql\'.');
 
-        $this->addSql('ALTER TABLE product ADD time DATETIME NOT NULL');
+//        $this->addSql('ALTER TABLE product ADD time DATETIME NOT NULL');
         $this->addSql('ALTER TABLE user ADD male VARCHAR(255) NOT NULL');
     }
 
