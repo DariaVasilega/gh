@@ -1,6 +1,6 @@
 security:
     encoders:
-        App\Entity\User:
+        App\Entity\Users:
             algorithm: auto
 
     # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
@@ -37,3 +37,5 @@ security:
         # - { path: ^/profile, roles: ROLE_USER }
         - { path: ^/login, allow_if: "!is_authenticated()" }
         - { path: ^/products, roles: ROLE_USER }
+        - { path: ^/post, roles: ROLE_USER }
+        - { path: ^/article, roles: ROLE_USER }
